@@ -1,0 +1,15 @@
+{
+    "ROS2.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/saintwings/ros2_mini_project/ros2_ws/build/two_wheel_robot",
+        "/home/saintwings/ros2_twowheel_ws/install/two_wheel_robot/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/saintwings/ros2_mini_project/ros2_ws/build/two_wheel_robot",
+        "/home/saintwings/ros2_twowheel_ws/install/two_wheel_robot/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

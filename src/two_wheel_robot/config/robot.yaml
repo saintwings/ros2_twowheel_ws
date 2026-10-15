@@ -1,0 +1,27 @@
+bno085_imu:
+  ros__parameters:
+    port: /dev/ttyACM0
+    baud: 921600
+    frame_id: imu_link
+    # Stamp messages from the BNO085 clock (mapped to ROS time) instead of
+    # the host receive time; removes USB batching jitter.
+    use_sensor_timestamp: true
+    # Diagonal variances; 0.0 means "unknown" per sensor_msgs/Imu.
+    linear_acceleration_variance: 0.0
+    angular_velocity_variance: 0.0
+
+zlac_motor_driver:
+  ros__parameters:
+    port: /dev/ttyUSB1
+    device_id: 1            # 0 = Modbus broadcast (no feedback readback)
+    baudrate: 115200
+    wheelbase_m: 0.35
+    wheel_diameter_m: 0.10
+    gear_ratio: 1.0
+    max_wheel_rpm: 100.0
+    max_linear_mps: 0.6
+    max_angular_rad_s: 2.0
+    motor_directions: [1, -1]   # left, right mounting sign
+    cmd_timeout_s: 0.5          # zero the wheels if /cmd_vel goes quiet
+    control_period_s: 0.05
+    feedback_period_s: 1.0

@@ -1,0 +1,25 @@
+# Same mapping as twoWheelControl/main.py (pygame):
+#   hold button 5 (R1/RB) = deadman, axis 3 = forward/back, axis 0 = turn,
+#   deadzone 0.05, 0.6 m/s and 2.0 rad/s at full stick.
+# ROS joy_node reports axes with the opposite sign to pygame (stick up/left
+# = +1), so the scales below are sign-adjusted to give identical motion.
+# Check your pad with: ros2 topic echo /joy
+joy_node:
+  ros__parameters:
+    device_id: 0
+    deadzone: 0.05
+    autorepeat_rate: 20.0
+
+teleop_twist_joy_node:
+  ros__parameters:
+    require_enable_button: true
+    enable_button: 5
+    enable_turbo_button: -1
+    axis_linear:
+      x: 3
+    scale_linear:
+      x: 0.6
+    axis_angular:
+      yaw: 0
+    scale_angular:
+      yaw: -2.0

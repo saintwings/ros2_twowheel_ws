@@ -1,0 +1,29 @@
+# ROS 2 / colcon build outputs
+/build/
+/install/
+/log/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Python environments
+.venv/
+venv/
+
+# ROS bag recordings and generated IMU log
+rosbag2_*/
+*.db3
+*.mcap
+imu_log.csv
+
+# Local editor state
+.vscode/*.db
+.vscode/*.db-*
+
+# OS files
+.DS_Store
